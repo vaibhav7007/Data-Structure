@@ -28,6 +28,12 @@ namespace LinkedList
                         linkedList.Display();
                         break;
                     case 3:
+                        linkedList.Append(56);
+                        linkedList.Append(30);
+                        linkedList.Append(70);
+                        linkedList.Display1();
+                        break;
+                    case 4:
                         flag = false;
                         break;
                     default:

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LinkedList
 {
-    internal class LinkedList
+    public class LinkedList
     {
         public Node head;
         public void Add(int data)
@@ -25,7 +25,7 @@ namespace LinkedList
                 }
                 temp.next = node;
             }
-            Console.WriteLine("{0} insterted into linked List: ", node.data);
+            Console.WriteLine("{0} is inserted into linked list.", node.data);
         }
         public void AddFirst(int data)
         {
@@ -46,6 +46,42 @@ namespace LinkedList
             {
                 Console.WriteLine(temp.data + " ");
                 temp = temp.next;
+            }
+        }
+        public void Append(int data)
+        {
+            Node newNode = new Node(data);
+            if (head == null)
+            {
+                head = newNode;
+                Console.WriteLine("{0} is added into linked list", newNode.data);
+            }
+            else
+            {
+                Node temp = head;
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = newNode;
+                Console.WriteLine("{0} is added into linked list", newNode.data);
+            }
+        }
+        public void Display1()
+        {
+            Console.WriteLine("\nDisplaying all nodes");
+            if (head == null)
+            {
+                Console.WriteLine("Linked list is empty");
+            }
+            else
+            {
+                Node temp = head;
+                while (temp != null)
+                {
+                    Console.WriteLine(temp.data);
+                    temp = temp.next;
+                }
             }
         }
     }
