@@ -12,7 +12,7 @@ namespace LinkedList
             while (flag)
             {
                 Console.WriteLine("Please enter an option");
-                Console.WriteLine("1:Create linked list\n2:Create linked list by adding\n3:Create linked list by Append\n4:Remove first element in linked list\n5:Remove last element in linked list");
+                Console.WriteLine("1:Create linked list\n2:Create linked list by adding\n3:Create linked list by Append\n4:Remove first element in linked list\n5:Remove last element in linked list\n6:Insert node in linked list");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -48,6 +48,12 @@ namespace LinkedList
                         linkedList.Display();
                         break;
                     case 6:
+                        linkedList.Add(56);
+                        linkedList.Add(70);
+                        linkedList.InsertNode(30, 56);
+                        linkedList.Display();
+                        break;
+                    case 7:
                         flag = false;
                         break;
                     default:
